@@ -5,22 +5,19 @@ ASP.NET Core Web API Biblioteca
 ![Library](img/2.png)
 
 
-
-
+## Program
+``` 
+var connectionString = builder.Configuration.GetConnectionString("Connection");
+builder.Services.AddDbContext<LibraryContext>(options =>
+{
+    options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 31)));
+});
+``` 
 
 ## appsetting.Development.json
 ``` 
 {
   "ConnectionStrings": {
-        "Connection": "Server=?;Database=Library;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True",
-  },
-  "EncryptionKey": "",
-  "JWTKey": "",
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  }
+        "Connection": "Server=localhost;Port=3306;Database=library;User=root;Password=root"
 }
 ``` 
