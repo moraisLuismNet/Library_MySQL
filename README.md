@@ -1,6 +1,6 @@
 ## Library_MySQL
 
-**Library_MySQL** is an ASP.NET Core Web API that manages library-related information, including authors, books, and publishing houses, as well as handling user authentication and logging actions performed on the system.
+**Library_MySQL** is an ASP.NET Core 8.0 Web API that manages library-related information, including authors, books, and publishing houses, as well as handling user authentication and logging actions performed on the system. It uses MySQL, Entity Framework Core and JWT for authentication. 
 
 ![Library_MySQL](img/UML.png)
 
